@@ -30,7 +30,8 @@ Medium: the project touches different aspects of the tool:
 During the project it will be necessary to determine the best way of presenting the tiles details so that it is understandable to FPGA users.
 
 _Duration_: 175 hours or 350 hours
-_Mentor_: @kgugala
+
+_Mentor_: [@kgugala](https://github.com/kgugala)
 
 ### Further reading
 
@@ -66,7 +67,8 @@ Further Reading
 * [f4pga-arch-defs documentation](https://symbiflow.readthedocs.io/en/latest/symbiflow-arch-defs/docs/source/index.html)
 
 _Duration_: 350 hours
-_Mentor_: @mkurc-ant
+
+_Mentor_: [@mkurc-ant](https://github.com/mkurc-ant)
 
 ## Improve the visual representation of the placement done by VTR
 
@@ -89,7 +91,8 @@ The result of this work should be a Vivado compatible script produced during the
 Medium: This project requires some hands-on experience with the Yosys and Vivado tools as well some basic knowledge of the TCL scripting language. C++ is vital to enhance the existing tools in the F4PGA toolchain.
 
 _Duration_: 175 hour or 350 hours
-_Mentor_: @acomodi
+
+_Mentor_: [@acomodi](https://github.com/acomodi)
 
 ## Spartan6 bitstream documentation
 
@@ -113,7 +116,8 @@ One of them is the part fuzzer which produces the information about how many con
 Hard: This project requires some deeper understanding of FPGA architectures. Experience with the ISE tool and TCL scripting language is useful for this task. Python and C++ are vital to create or enhance existing tools used in X-Ray.
 
 _Duration_: 350 hours
-_Mentor_: @tmichalak
+
+_Mentor_: [@tmichalak](https://github.com/tmichalak)
 
 ## Document XADC and `DNA_PORT` blocks for Xilinx Series 7
 
@@ -139,7 +143,8 @@ As a result of this task 2 complete fuzzers shall be created:
 Easy: The task mostly requires getting familiar with the methodology used in other X-Ray fuzzers and reusing existing or coming up with your own approach to get the expected outcome.
 
 _Duration_: 175 hours
-_Mentor_: @mkurc-ant
+
+_Mentor_: [@mkurc-ant](https://github.com/mkurc-ant)
 
 ## SystemVerilog preprocessor for Verible
 
@@ -169,4 +174,5 @@ Hard: This project requires a good understanding of the language parsing process
 
 
 _Duration_: 350 hours
-_Mentor_: @tgrochowik
+
+_Mentor_: [@tgrochowik](https://github.com/tgorochowik)
