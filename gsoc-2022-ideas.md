@@ -15,17 +15,22 @@ Nice to have feature will be a nice visualization of the tiles internals (Basic 
 ## Expected outcomes
 
 The result of this work will be an extension to existing FPGA devices visualization software allowing it to show details of logic tiles of the visualized chip. As part of the work, the existing [visualization demo](https://antmicro.github.io/symbiflow-database-visualizer/) will have to be extended to present the tile details.
+
 ### Required skills
 
 Python, NodeJS
 
 ### Difficulty
+
 Medium: the project touches different aspects of the tool:
 
 * Intermediate representation of the chip data
 * Frontend and grid rendering
 
 During the project it will be necessary to determine the best way of presenting the tiles details so that it is understandable to FPGA users.
+
+_Duration_: 175 hours or 350 hours
+_Mentor_: @kgugala
 
 ### Further reading
 
@@ -60,6 +65,8 @@ Further Reading
 
 * [f4pga-arch-defs documentation](https://symbiflow.readthedocs.io/en/latest/symbiflow-arch-defs/docs/source/index.html)
 
+_Duration_: 350 hours
+_Mentor_: @mkurc-ant
 
 ## Improve the visual representation of the placement done by VTR
 
@@ -81,6 +88,9 @@ The result of this work should be a Vivado compatible script produced during the
 
 Medium: This project requires some hands-on experience with the Yosys and Vivado tools as well some basic knowledge of the TCL scripting language. C++ is vital to enhance the existing tools in the F4PGA toolchain.
 
+_Duration_: 175 hour or 350 hours
+_Mentor_: @acomodi
+
 ## Spartan6 bitstream documentation
 
 Spartan6 is a popular part that is still used in many boards in the market today. There has already been some work in F4PGA with regard to this architecture. Namely, it’s possible to read the original bitstream and convert to a textual representation of its content in the form of what bits in which frame are active. F4PGA tools can also generate a bitstream from a textual representation.
@@ -101,6 +111,9 @@ One of them is the part fuzzer which produces the information about how many con
 ### Difficulty
 
 Hard: This project requires some deeper understanding of FPGA architectures. Experience with the ISE tool and TCL scripting language is useful for this task. Python and C++ are vital to create or enhance existing tools used in X-Ray.
+
+_Duration_: 350 hours
+_Mentor_: @tmichalak
 
 ## Document XADC and `DNA_PORT` blocks for Xilinx Series 7
 
@@ -124,6 +137,9 @@ As a result of this task 2 complete fuzzers shall be created:
 ### Difficulty
 
 Easy: The task mostly requires getting familiar with the methodology used in other X-Ray fuzzers and reusing existing or coming up with your own approach to get the expected outcome.
+
+_Duration_: 175 hours
+_Mentor_: @mkurc-ant
 
 ## SystemVerilog preprocessor for Verible
 
@@ -152,3 +168,5 @@ A standalone library with a well defined API that can be used to preprocess Syst
 Hard: This project requires a good understanding of the language parsing process (lexing, parsing, preprocessing) but also a good understanding of linting and formatting concepts
 
 
+_Duration_: 350 hours
+_Mentor_: @tgrochowik
