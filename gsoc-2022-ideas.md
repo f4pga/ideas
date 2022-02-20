@@ -1,5 +1,12 @@
 # F4PGA GSoC 2022 project ideas
 
+1. [FPGA chips database visualizer improvements](#fpga-chips-database-improvements)
+1. [DSP hard block integration in F4PGA](#dsp-hard-block-integration-in-f4pga)
+1. [Improve the visual representation of the placement done by VTR](#improve-the-visual-representation-of-the-placement-done-by-vtr)
+1. [Spartan6 bitstream documentation](#spartan6-bitstream-documentation)
+1. [Document XADC and `DNA_PORT` blocks for Xilinx Series 7](#document-xadc-and-dna_port-blocks-for-xilinx-series-7)
+1. [SystemVerilog preprocessor for Verible](#systemverilog-preprocessor-for-verible)
+
 ## FPGA chips database visualizer improvements
 
 The database visualizer is an open source tool for visualizing the structure of FPGA chips covered by the F4PGA project. This is very useful in understanding the internal structure of specific FPGAs and reasoning about ways to best support them in the open source tools. Currently the tool supports visualizing the top level structure (tiles) of an FPGA chip as it is documented and modeled in open source toolchains.
