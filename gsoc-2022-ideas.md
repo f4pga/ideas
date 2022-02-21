@@ -50,8 +50,11 @@ _Mentor_: [@kgugala](https://github.com/kgugala)
 
 ## DSP hard block integration in F4PGA
 
-The DSP (Digital Signal Processing) hard block of the Xilinx 7-series FPGA devices is currently documented in [Project X-Ray](https://github.com/SymbiFlow/prjxray), but it currently lacks support within the [F4PGA architecture definitions](https://github.com/SymbiFlow/f4pga-arch-defs).
-Support for a new primitive like the DSP hard block in the architecture will enable designs using DSP to be synthesized, placed and routed correctly. This project  will aim at enabling the entire testing flow for designs using Xilinx 7-series DSP hard blocks to complete successfully.
+Modern FPGAs are equipped with multiple dedicated hard-blocks which can perform operations that would be slow and resource consuming if implemented as a part of a design in the fabric. An example of such a hard-block is a DSP (Digital Signal Processing) unit. DSP blocks can perform basic math operations like addition, multiplicaion and multiply-accumulate which are very common in signal processing pipelines.
+
+The DSP hard block of the Xilinx 7-series FPGA devices (DSP48E) is currently documented in [Project X-Ray](https://github.com/SymbiFlow/prjxray), but it currently lacks support within the [F4PGA architecture definitions](https://github.com/SymbiFlow/f4pga-arch-defs). The aim of this project is to add support for DSP48E to the architecture definition so that it can be supported by the toolchain. This will enable designs using DSPs to be synthesized, placed and routed correctly.
+
+This project will also aim at enabling the entire testing flow for designs using Xilinx 7-series DSP hard blocks to complete successfully.
 The testing flow includes:
 
 * Verilog-to-Bitstream using the F4PGA toolchain
@@ -83,9 +86,10 @@ _Mentor_: [@mkurc-ant](https://github.com/mkurc-ant)
 ## Improve the visual representation of the placement done by VTR
 
 During the fasm2bels stage in f4pga-arch-defs, the [fasm](https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html) information is transformed into a post-P&R design in form of a Verilog netlist and few TCL scripts that can be later on read by Vivado.
-One of the scripts contains the information about which BELs should be instantiated and how they should be connected.
+One of the scripts contains the information about which BELs (Basic Logic Elements) should be instantiated and how they should be connected.
 Currently, however there is no information about which BEL corresponds to which instance in the original netlist which makes the placement graph hard to read.
 The idea is to implement a mechanism that will allow for better visual representation of the placement done by [VTR](https://verilogtorouting.org/) (Verilog to Routing) by highlighting the instances on various hierarchy levels with a set of colors.
+Having a clear visualization of the post-placement instances and their mapping to the physical blocks of the FPGA would be a great benefit for the toolchain users, who can leverage this information to better understand which parts of the design may need optimization.
 
 ### Expected Outcome
 
@@ -106,7 +110,7 @@ _Mentor_: [@acomodi](https://github.com/acomodi)
 
 ## Spartan6 bitstream documentation
 
-Spartan6 is a popular part that is still used in many boards in the market today. There has already been some work in F4PGA with regard to this architecture. Namely, it’s possible to read the original bitstream and convert to a textual representation of its content in the form of what bits in which frame are active. F4PGA tools can also generate a bitstream from a textual representation.
+Spartan6 is a popular FPGA from AMD (formerly Xilinx) which is still used in many boards on the market today. For exactly this reason there is continuous interest in creating an open source toolchain for this architecture. There has already been some work in F4PGA with regard to this architecture. Namely, it’s possible to read the original bitstream and convert to a textual representation of its content in the form of what bits in which frame are active. F4PGA tools can also generate a bitstream from a textual representation.
 The missing part falls into the scope of project X-Ray where the meaning of those bits found in the bitstream has to be determined.
 The idea is to extend the existing set of project X-Ray infrastructure/tools/fuzzers to document the information which bits correspond to what features of the Spartan6 architecture
 
@@ -131,9 +135,9 @@ _Mentor_: [@tmichalak](https://github.com/tmichalak)
 
 ## Document XADC and `DNA_PORT` blocks for Xilinx Series 7
 
-F4PGA’s FPGA flow depends on so-called [architecture definitions](https://github.com/SymbiFlow/f4pga-arch-defs), which are hardware descriptions of specific FPGAs that enable using specific configurable and hard blocks.
-XADC is a dual 12-bit Analog-to-Digital converter block featured on the Xilinx Series 7 FPGAs, covered by [project X-Ray](https://github.com/SymbiFlow/prjxray).
-The DNA port allows access to a dedicated shift register that can be loaded with some DNA data bits which can be factory programmed.
+Among other dedicated hard-blocks performing functionality that cannot be implemented directly using FPGA fabric Xilinx 7-series devices provide the `XADC` block and `DNA_PORT` block. The former is a generic dual 12-bit A/C converter capable not only of sampling external voltages but also reading the device's internal sensors like the temperature sensor. The latter block allows accessing unique device identification data a.k.a. "DNA".
+
+F4PGA’s FPGA flow depends on so-called [architecture definitions](https://github.com/SymbiFlow/f4pga-arch-defs), which are hardware descriptions of specific FPGAs that enable using specific configurable and hard blocks. Documentation of Xilinx 7-series hard blocks is covered by [project X-Ray](https://github.com/SymbiFlow/prjxray).
 The task is to extend the existing fuzzer to document all XADC related configuration bits as well as create a new fuzzer for the DNA block so that they become available in the open source flow.
 
 ### Expected Outcome
@@ -188,7 +192,8 @@ _Mentor_: [@tgrochowik](https://github.com/tgorochowik)
 
 ## F4PGA toolchain integration in mainline Edalize
 
-[Edalize](https://github.com/olofk/edalize) is a Python library to easily interface with many different EDA tools. It is heavily used in FPGA-tool-perf to generate the setup for various builds.
+[Edalize](https://github.com/olofk/edalize) is a Python library to easily interface with many different EDA tools. It is heavily used in [FPGA-tool-perf](https://github.com/chipsalliance/fpga-tool-perf) to generate the setup for many different design builds.
+Moreover, tools such as Edalize lower the barrier to approach the vast landscape of EDA tools, thus making it a great fit to enable the F4PGA toolchain support, greatly improving its usability.
 Currently, [FPGA-tool-perf](https://github.com/chipsalliance/fpga-tool-perf) uses a forked version of Edalize, as it required some changes for the adoption of the F4PGA toolchain.
 The idea is to move all the changes in upstream Edalize, to lessen the burden of maintaining the internal fork, with the advantage of integrating the most recent features of the upstream repository, such as the metrics extraction, which is currently handled externally in FPGA-tool-perf.
 
@@ -213,6 +218,7 @@ _Mentor_: [@acomodi](https://github.com/acomodi)
 
 [FPGA-tool-perf](https://github.com/chipsalliance/fpga-tool-perf) is a tool to run and profile different FPGA designs, supporting many toolchains, both open and closed source.
 Its main focus is to gather information about different interesting metrics, such as run-time, frequency, area-utilization and more.
+One of the great advantages of using such a tool is being able to verify and monitor the performance over time of all the different desings and toolchains, understand the overall status of the EDA ecosystem and identify what can be improved and optimized to achieve better results.
 While the core of the tool has most of the functionalities supported, and performance data is correctly generated by CI, a proper visualization tool of said data is still lagging behind.
 At the moment, the data is visualized on this [page](https://chipsalliance.github.io/fpga-tool-perf/) which is generated by the CI, but it requires some changes (both backend and visualization) to improve the performance of the code and improve the presentation layer of the collected results.
 
