@@ -182,7 +182,6 @@ A standalone library with a well defined API that can be used to preprocess Syst
 
 Hard: This project requires a good understanding of the language parsing process (lexing, parsing, preprocessing) but also a good understanding of linting and formatting concepts
 
-
 _Duration_: 350 hours
 
 _Mentor_: [@tgrochowik](https://github.com/tgorochowik)
@@ -203,8 +202,8 @@ FPGA-tool-perf uses the upstream Edalize library, with all the additional featur
 * FPGA tools usage
 
 ### Difficulty
-Easy: This project is mostly aimed at improving and upstreaming an already existing development code.
 
+Easy: This project is mostly aimed at improving and upstreaming an already existing development code.
 
 _Duration_: 175 hours
 
@@ -236,7 +235,6 @@ _Duration_: 175 hours or 350 hours
 
 _Mentor_: [@acomodi](https://github.com/acomodi)
 
-
 ## Generalization of wrapper scripts for installed F4PGA toolchain and making them OS agnostic
 
 F4PGA aims to become a "GCC for FPGA" where a user can choose the target FPGA device merely by specifying different command line switches in the toolchain invocation command.
@@ -252,12 +250,13 @@ It is also not possible currently to add another intermediate stage to the whole
 * As a result of this task the toolchain wrapper scripts will be re-written to Python and become common to all F4PGA architectures. The flow definition for each device will be read by them from a config file.
 * The F4PGA toolchain runs on Linux, Windows and MacOS with the newly created Python wrappers. The flow on all three OSes is identical so that the end user is not influenced by the choice of OS.
 
-###Skills Required
+### Skills Required
 
 * Scripting languages: Bash, Python
-* Operating system knowledge: Linux, Windows, MacO
+* Operating system knowledge: Linux, Windows, MacOS
 
-Difficulty
+### Difficulty
+
 Medium: The task does require more than just Bash to Python script conversion. It requires developing a unified way of describing the toolchain flow, as well as writing scripts which will use the description to broaden the scope to more platforms while making the flow more user friendly.
 
 
