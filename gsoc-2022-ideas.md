@@ -73,7 +73,7 @@ This project will enable full support of DSP hard blocks within the F4PGA toolch
 
 ### Difficulty
 
-Challenging: This project takes into consideration many different aspects of the toolchain, including the architecture generation infrastructure, synthesis and place and route. Moreover, the skill-set required to achieve the goal is very diverse.
+Hard: This project takes into consideration many different aspects of the toolchain, including the architecture generation infrastructure, synthesis and place and route. Moreover, the skill-set required to achieve the goal is very diverse.
 
 ### Further Reading
 
