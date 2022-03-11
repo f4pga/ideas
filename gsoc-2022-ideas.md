@@ -12,7 +12,7 @@
 
 ## FPGA chips database visualizer improvements
 
-The [F4PGA database visualizer](https://github.com/antmicro/f4pga-database-visualizer) is an open source tool for visualizing the structure of FPGA chips covered by the F4PGA project. This is very useful in understanding the internal structure of specific FPGAs and reasoning about ways to best support them in the open source tools. Currently the tool supports visualizing the top level structure (tiles) of an FPGA chip as it is documented and modeled in open source toolchains.
+The [F4PGA database visualizer](https://github.com/chipsalliance/f4pga-database-visualizer) is an open source tool for visualizing the structure of FPGA chips covered by the F4PGA project. This is very useful in understanding the internal structure of specific FPGAs and reasoning about ways to best support them in the open source tools. Currently the tool supports visualizing the top level structure (tiles) of an FPGA chip as it is documented and modeled in open source toolchains.
 
 ### Task description
 
@@ -24,7 +24,7 @@ The main goal of the project is to extend the tool with the possibility of visua
 
 ## Expected outcomes
 
-The work will result in improvements in the existing FPGA devices visualization software allowing it to show details of logic tiles of the visualized chip. As part of the work, the existing [visualization demo](https://antmicro.github.io/symbiflow-database-visualizer/) will have to be extended to present the tile details.
+The work will result in improvements in the existing FPGA devices visualization software allowing it to show details of logic tiles of the visualized chip. As part of the work, the existing [visualization demo](https://chipsalliance.github.io/f4pga-database-visualizer/) will have to be extended to present the tile details.
 
 ### Required skills
 
@@ -45,8 +45,8 @@ _Mentor_: [@kgugala](https://github.com/kgugala)
 
 ### Further reading
 
-* [Example chip visualization](https://antmicro.github.io/symbiflow-database-visualizer/?dbfile=data%2Fprjxraydb%2Fartix7%2Fxc7a100t.json)
-* [Visualizer repository](https://github.com/antmicro/symbiflow-database-visualizer)
+* [Example chip visualization](https://chipsalliance.github.io/f4pga-database-visualizer/?dbfile=data%2Fprjxraydb%2Fartix7%2Fxc7a100t.json)
+* [Visualizer repository](https://github.com/chipsalliance/f4pga-database-visualizer)
 
 ## DSP hard block integration in F4PGA
 
@@ -77,7 +77,7 @@ Hard: This project takes into consideration many different aspects of the toolch
 
 ### Further Reading
 
-* [f4pga-arch-defs documentation](https://symbiflow.readthedocs.io/en/latest/symbiflow-arch-defs/docs/source/index.html)
+* [f4pga-arch-defs documentation](https://f4pga.readthedocs.io/projects/arch-defs/en/latest/)
 
 _Duration_: 350 hours
 
@@ -85,7 +85,7 @@ _Mentor_: [@mkurc-ant](https://github.com/mkurc-ant)
 
 ## Improve the visual representation of the placement done by VTR
 
-During the fasm2bels stage in f4pga-arch-defs, the [fasm](https://symbiflow.readthedocs.io/en/latest/fasm/docs/specification.html) information is transformed into a post-P&R design in form of a Verilog netlist and few TCL scripts that can be later on read by Vivado.
+During the fasm2bels stage in f4pga-arch-defs, the [fasm](https://fasm.readthedocs.io/en/latest/) information is transformed into a post-P&R design in form of a Verilog netlist and few TCL scripts that can be later on read by Vivado.
 One of the scripts contains the information about which BELs (Basic Logic Elements) should be instantiated and how they should be connected.
 Currently, however there is no information about which BEL corresponds to which instance in the original netlist which makes the placement graph hard to read.
 The idea is to implement a mechanism that will allow for better visual representation of the placement done by [VTR](https://verilogtorouting.org/) (Verilog to Routing) by highlighting the instances on various hierarchy levels with a set of colors.
