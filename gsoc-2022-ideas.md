@@ -9,6 +9,7 @@
 1. [F4PGA toolchain integration in mainline Edalize](#f4pga-toolchain-integration-in-mainline-edalize)
 1. [FPGA Tool Performance Results Visualization](#fpga-tool-performance-results-visualization)
 1. [Generalization of wrapper scripts for installed F4PGA toolchain and making them OS agnostic](#generalization-of-wrapper-scripts-for-installed-f4pga-toolchain-and-making-them-OS-agnostic)
+1. [Symmetrical placement and routing APIs in OpenFASOC].(#Symmetrical placement and routing APIs in OpenFASOC)
 
 ## FPGA chips database visualizer improvements
 
@@ -269,3 +270,18 @@ Medium: The task does require more than just Bash to Python script conversion. I
 _Duration_: 175 hours or 350 hours
 
 _Mentor_: [@mkurc-ant](https://github.com/mkurc-ant)
+
+
+## Symmetrical placement and routing APIs in OpenFASOC
+
+OpenFASOC is a framework used for automated IC design generation. It sits on top of tools such as OpenROAD primararly but recently is using tools such as gdsfactory and ALIGN. Currently, we have enabled a few py based functions that allow us to help with our analog layout requirements, and we are planning to create more general APIs that could be generalized to new analog designs.
+
+### Expected Outcome
+
+* As a result of this, it is expected to add new APIs that guides OpenROAD's placement/routing tools to enhance specific parts of the placement/routing steps (symmetry, guard banding, non default rules, symmetry, etc..)
+* Call tools such as gdsfactory or ALIGN, to improve specific cells (aux cells) to improve the overall layout performance of the smaller circuits, routing or placement.
+
+### Skills Required
+
+* Scripting languages: Python, C++
+* Nice to have: Circuit level and Physical Design basic understanding
