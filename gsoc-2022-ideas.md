@@ -9,7 +9,7 @@
 1. [F4PGA toolchain integration in mainline Edalize](#f4pga-toolchain-integration-in-mainline-edalize)
 1. [FPGA Tool Performance Results Visualization](#fpga-tool-performance-results-visualization)
 1. [Generalization of wrapper scripts for installed F4PGA toolchain and making them OS agnostic](#generalization-of-wrapper-scripts-for-installed-f4pga-toolchain-and-making-them-OS-agnostic)
-1. [Symmetrical placement and routing APIs in OpenFASOC].(#Symmetrical placement and routing APIs in OpenFASOC)
+1. [Symmetrical placement and routing APIs in OpenFASOC](#Symmetrical placement and routing APIs in OpenFASOC)
 
 ## FPGA chips database visualizer improvements
 
@@ -284,4 +284,14 @@ OpenFASOC is a framework used for automated IC design generation. It sits on top
 ### Skills Required
 
 * Scripting languages: Python, C++
+* Operating system knowledge: Linux, Windows
 * Nice to have: Circuit level and Physical Design basic understanding
+
+### Difficulty
+
+Medium: The task does require physical design understanding, python and C++ coding skills are needed
+
+
+_Duration_: 350 hours
+
+_Mentor_: [@msaligane](https://github.com/msaligane)
