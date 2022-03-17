@@ -10,6 +10,8 @@
 1. [FPGA Tool Performance Results Visualization](#fpga-tool-performance-results-visualization)
 1. [Generalization of wrapper scripts for installed F4PGA toolchain and making them OS agnostic](#generalization-of-wrapper-scripts-for-installed-f4pga-toolchain-and-making-them-OS-agnostic)
 1. [Symmetrical placement and routing APIs in OpenFASOC](#Symmetrical-placement-and-routing-APIs-in-OpenFASOC)
+1. [Smart and cloud based infrastructure to test analog blocks functionality and performance](#Smart-and-cloud-based-infrastructure-to-improve-analog-blocks-functionality-and-performance)
+
 
 ## FPGA chips database visualizer improvements
 
@@ -274,7 +276,7 @@ _Mentor_: [@mkurc-ant](https://github.com/mkurc-ant)
 
 ## Symmetrical placement and routing APIs in OpenFASOC
 
-OpenFASOC is a framework used for automated IC design generation. It sits on top of tools such as OpenROAD primararly but recently is using tools such as gdsfactory and ALIGN. Currently, we have enabled a few py based functions that allow us to help with our analog layout requirements, and we are planning to create more general APIs that could be generalized to new analog designs.
+[OpenFASOC](https://github.com/idea-fasoc/OpenFASOC) is a framework used for automated IC design generation. It sits on top of tools such as [OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD) primararly but recently is using tools such as [gdsfactory](https://github.com/gdsfactory/gdsfactory) and [ALIGN](https://github.com/ALIGN-analoglayout/ALIGN-public). Currently, we have enabled a few Python based functions that allow us to help with our analog layout requirements, and we are planning to create more general APIs that could be generalized to new analog designs.
 
 ### Expected Outcome
 
@@ -283,7 +285,7 @@ OpenFASOC is a framework used for automated IC design generation. It sits on top
 
 ### Skills Required
 
-* Scripting languages: Python, C++
+* Programming languages: Python, C++
 * Operating system knowledge: Linux, Windows
 * Nice to have: Circuit level and Physical Design basic understanding
 
@@ -295,3 +297,30 @@ Medium: The task does require physical design understanding, python and C++ codi
 _Duration_: 350 hours
 
 _Mentor_: [@msaligane](https://github.com/msaligane)
+
+
+## Smart and cloud based infrastructure to test analog blocks functionality and performance in OpenFASOC
+
+[OpenFASOC](https://github.com/idea-fasoc/OpenFASOC) is solely using open source EDA tools to build automated analog and IC blocks. Since we are following a software style approach to hardware, it is important to make sure every new commit or pull request do not impact our generator's final result. This can be either done by checking functionality (DRC, LVS, Simulation), or performance (IE: inaccuraccy of a temp. sensor, or figure of merit (FOM) of an ADC etc..). Moreover, to be able to leverage the high computing power provided by Google Cloud Platform, design space exploration by generating a large number of blocks could be used to enable data driven optimizations at circuit/layout level by testing all the possible design input configurations.
+      
+### Expected Outcome
+
+* Analog generators can be tested continuosly as we update its source code to check for functionality and performance
+* Smart and granular tests are used to detect small design improvements or issues
+* Create Importable Python modules for each of the generators as explained [here](https://github.com/idea-fasoc/OpenFASOC/issues/38) 
+
+### Skills Required
+ 
+* Programming languages: Python, C++
+* Operating system knowledge: Linux, Windows
+* Nice to have: Circuit level and Physical Design basic understanding
+
+### Difficulty
+
+Medium: The task does require python and C++ coding skills are needed, circuit IC design knowledge would be useful.
+
+ 
+_Duration_: 350 hours
+ 
+_Mentor_: [@msaligane](https://github.com/msaligane)
+
