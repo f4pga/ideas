@@ -303,6 +303,7 @@ _Mentor_: [@msaligane](https://github.com/msaligane)
 
 [OpenFASOC](https://github.com/idea-fasoc/OpenFASOC) is solely using open source EDA tools to build automated analog and IC blocks. Since we are following a software style approach to hardware, it is important to make sure every new commit or pull request do not impact our generator's final result. This can be either done by checking functionality (DRC, LVS, Simulation), or performance (IE: inaccuraccy of a temp. sensor, or figure of merit (FOM) of an ADC etc..). Moreover, to be able to leverage the high computing power provided by Google Cloud Platform, design space exploration by generating a large number of blocks could be used to enable data driven optimizations at circuit/layout level by testing all the possible design input configurations.
       
+ 
 ### Expected Outcome
 
 * Analog generators can be tested continuosly as we update its source code to check for functionality and performance
