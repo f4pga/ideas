@@ -10,7 +10,7 @@
 1. [FPGA Tool Performance Results Visualization](#fpga-tool-performance-results-visualization)
 1. [Generalization of wrapper scripts for installed F4PGA toolchain and making them OS agnostic](#generalization-of-wrapper-scripts-for-installed-f4pga-toolchain-and-making-them-OS-agnostic)
 1. [Symmetrical placement and routing APIs in OpenFASOC](#Symmetrical-placement-and-routing-APIs-in-OpenFASOC)
-1. [Smart and cloud based infrastructure to test analog blocks functionality and performance](#Smart-and-cloud-based-infrastructure-to-improve-analog-blocks-functionality-and-performance)
+1. [Smart and cloud based infrastructure to test analog blocks functionality and performance in OpenFASOC](#Smart-and-cloud-based-infrastructure-to-test-analog-blocks-functionality-and-performance-in-OpenFASOC)
 
 
 ## FPGA chips database visualizer improvements
